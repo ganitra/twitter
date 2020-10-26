@@ -6,13 +6,7 @@
 import coverPage from './modules/coverPage/index.js'
 import profile from './tasks/profile.js'
 
-export const config = {
-    name: 'twitter',
-}
-
 export const modules = [coverPage]
+export const tasks = [profile]
 
-export default async () => {
-    console.log('Twitter plugin initialized')
-    profile()
-}
+export { default as config } from './config.js'

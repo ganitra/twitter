@@ -4,10 +4,8 @@
  *  Created On 26 October 2020
  */
 
-const profile = async () => {
-    //
+const action = async () => {
+    console.log('twitter task is running')
 }
 
-export default async () => {
-    //
-}
+export default { action, name: 'twitterProfile', interval: 1000 }
