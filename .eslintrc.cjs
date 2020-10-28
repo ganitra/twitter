@@ -13,7 +13,7 @@ module.exports = {
     rules: {
         indent: ['error', 4],
         'linebreak-style': ['error', 'unix'],
-        quotes: ['error', 'single'],
+        quotes: 'off',
         semi: ['error', 'never'],
         'prettier/prettier': 'error',
         'simple-import-sort/sort': 'error',

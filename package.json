@@ -15,8 +15,8 @@
     "cpu": [
         "x64"
     ],
-    "homepage": "https://github.com/vasanthdeveloper/@ganitra/twitter#readme",
-    "bugs": "https://github.com/vasanthdeveloper/@ganitra/twitter/issues",
+    "homepage": "https://github.com/ganitra/twitter#readme",
+    "bugs": "https://github.com/ganitra/twitter/issues",
     "author": {
         "name": "Vasanth Developer",
         "email": "vasanth@vasanthdeveloper.com",
@@ -24,11 +24,13 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/vasanthdeveloper/@ganitra/twitter.git"
+        "url": "https://github.com/ganitra/twitter.git"
     },
     "scripts": {},
     "keywords": [],
-    "dependencies": {},
+    "dependencies": {
+        "twit": "^2.2.11"
+    },
     "devDependencies": {
         "@babel/core": "^7.12.3",
         "@babel/eslint-parser": "^7.12.1",

@@ -4,7 +4,7 @@
  */
 
 const action = async () => {
-    console.log('twitter coverPage action!')
+    // console.log('twitter coverPage action!')
 }
 
 export default {
