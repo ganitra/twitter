@@ -12,7 +12,7 @@ const action = async ganitra => {
     if (!twitter) await login(ganitra.config.auth)
 
     const render = await ganitra.render(false)
-    if (!render) return
+    if (!render || ganitra.rc.dry == true) return
 
     const updated = await utilities.promise.handle(
         twitter.accountsAndUsers.accountUpdateProfileBanner({
