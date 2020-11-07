@@ -29,7 +29,8 @@
     "scripts": {},
     "keywords": [],
     "dependencies": {
-        "twit": "^2.2.11"
+        "@vasanthdeveloper/utilities": "^0.0.4",
+        "twitter-api-client": "^1.2.0"
     },
     "devDependencies": {
         "@babel/core": "^7.12.3",
