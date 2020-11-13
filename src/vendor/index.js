@@ -13,5 +13,6 @@ export const login = config => {
         apiSecret: config.key_secret,
         accessToken: config.token,
         accessTokenSecret: config.token_secret,
+        disableCache: true,
     })
 }
