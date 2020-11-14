@@ -3,6 +3,7 @@
     "description": "( गणित्र ) – Plugin to auto 🌀 update media and 🎨 artwork on Twitter.",
     "version": "1.0.0",
     "license": "UNLICENSED",
+    "private": false,
     "main": "src/twitter.js",
     "type": "module",
     "engines": {
