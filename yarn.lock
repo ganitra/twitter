@@ -352,6 +352,11 @@ color-name@~1.1.4:
   resolved "https://registry.yarnpkg.com/color-name/-/color-name-1.1.4.tgz#c2a09a87acbde69543de6f63fa3995c826c536a2"
   integrity sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==
 
+commafy-anything@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/commafy-anything/-/commafy-anything-2.0.0.tgz#73286943306163c973354a60ccfaeafa5bc1d84f"
+  integrity sha512-0+sV82apQEv6mbNgEyfLmuVbSW+bBvG9ZUpCDkGJEIetpWPj14SH9CS2ArHP5gFm1OYKY8gcPN82WiToUJ3kfA==
+
 concat-map@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/concat-map/-/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"

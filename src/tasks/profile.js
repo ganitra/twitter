@@ -5,8 +5,13 @@
  */
 
 import utilities from '@vasanthdeveloper/utilities'
+import { commafy } from 'commafy-anything'
 
 import { login, twitter } from '../vendor/index.js'
+
+// num() will make a number pretty
+// and easy to read by adding commas
+const num = input => commafy(input, { thousandsComma: true })
 
 const action = async ganitra => {
     // login if we're not already
@@ -35,16 +40,16 @@ const action = async ganitra => {
     ganitra.database.set('username', profile.screen_name)
     ganitra.database.set('location', profile.location)
     ganitra.database.set('bio', profile.description)
-    ganitra.database.set('followers', profile.followers_count)
-    ganitra.database.set('following', profile.friends_count)
-    ganitra.database.set('listed', profile.listed_count)
     ganitra.database.set('createdAt', profile.created_at)
-    ganitra.database.set('favorites', profile.favourites_count)
     ganitra.database.set('verified', profile.verified)
-    ganitra.database.set('tweets', profile.statuses_count)
-    ganitra.database.set('tweets', profile.statuses_count)
     ganitra.database.set('theme', profile.profile_link_color)
     ganitra.database.set('link', profile.entities.url.urls[0].expanded_url)
+
+    ganitra.database.set('favorites', num(profile.favourites_count))
+    ganitra.database.set('tweets', num(profile.statuses_count))
+    ganitra.database.set('listed', num(profile.listed_count))
+    ganitra.database.set('following', num(profile.friends_count))
+    ganitra.database.set('followers', num(profile.followers_count))
 
     await ganitra.logger.verbose(`Updated profile info of ${profile.name}`)
 }
