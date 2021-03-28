@@ -15,9 +15,10 @@ module.exports = {
         'linebreak-style': ['error', 'unix'],
         quotes: 'off',
         semi: ['error', 'never'],
-        'prettier/prettier': 'error',
-        'simple-import-sort/sort': 'error',
         'sort-imports': 'off',
         'import/order': 'off',
+        'prettier/prettier': 'error',
+        'simple-import-sort/exports': 'error',
+        'simple-import-sort/imports': 'error',
     },
 }
