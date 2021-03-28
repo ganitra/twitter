@@ -30,9 +30,9 @@
     "scripts": {},
     "keywords": [],
     "dependencies": {
-        "@vasanthdeveloper/utilities": "^0.0.4",
-        "commafy-anything": "^2.0.0",
-        "twitter-api-client": "^1.2.0"
+        "@vasanthdeveloper/utilities": "^0.2.0",
+        "commafy-anything": "^2.1.0",
+        "twitter-api-client": "^1.3.7"
     },
     "devDependencies": {
         "@babel/core": "^7.12.3",
