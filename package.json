@@ -1,7 +1,7 @@
 {
     "name": "@ganitra/twitter",
     "description": "( गणित्र ) – Plugin to auto 🌀 update media and 🎨 artwork on Twitter.",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "license": "UNLICENSED",
     "private": false,
     "main": "src/twitter.js",
