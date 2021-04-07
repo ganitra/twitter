@@ -11,12 +11,18 @@ const action = async ganitra => {
     // login if we're not already
     if (!twitter) await login(ganitra.config.auth)
 
-    const render = await ganitra.render(false)
+    const type = ganitra.rc.dry ? 'path' : 'base64'
+
+    // render the image
+    const render = await ganitra.render(type)
+
+    // we're done for dry mode
     if (!render || ganitra.rc.dry == true) return
 
+    // send to twitter
     const updated = await utilities.promise.handle(
         twitter.accountsAndUsers.accountUpdateProfileBanner({
-            banner: Buffer.from(render.result).toString('base64'),
+            banner: render.rendered,
         }),
     )
 
@@ -26,13 +32,13 @@ const action = async ganitra => {
         return
     }
 
+    // take a data snapshot to leverage
+    // caching
+    await ganitra.snapshot(render)
+
     ganitra.logger.verbose(
         `Updated cover artwork of @${ganitra.config.username}`,
     )
-
-    await ganitra.snapshot(render)
-
-    return
 }
 
 export default {
