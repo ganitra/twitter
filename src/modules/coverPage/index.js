@@ -11,10 +11,13 @@ const action = async ganitra => {
     // login if we're not already
     if (!twitter) await login(ganitra.config.auth)
 
-    const type = ganitra.rc.dry ? 'path' : 'base64'
+    const response = ganitra.rc.dry ? 'path' : 'base64'
 
     // render the image
-    const render = await ganitra.render(type)
+    const render = await ganitra.render({
+        response,
+        format: 'jpg',
+    })
 
     // we're done for dry mode
     if (!render || ganitra.rc.dry == true) return
