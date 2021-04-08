@@ -37,7 +37,7 @@ const action = async ganitra => {
 
     // take a data snapshot to leverage
     // caching
-    await ganitra.snapshot(render)
+    await ganitra.snapshot({...render, ...{ format: 'jpg' }})
 
     ganitra.logger.verbose(
         `Updated cover artwork of @${ganitra.config.username}`,
