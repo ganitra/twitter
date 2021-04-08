@@ -20,7 +20,7 @@ const action = async ganitra => {
     })
 
     // we're done for dry mode
-    if (!render || ganitra.rc.dry == true) return
+    if (render.cached || ganitra.rc.dry == true) return
 
     // send to twitter
     const updated = await utilities.promise.handle(
