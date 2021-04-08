@@ -27,6 +27,9 @@
         "type": "git",
         "url": "https://github.com/ganitra/twitter.git"
     },
+    "ganitra": {
+        "color": "#1da1f2"
+    },
     "scripts": {},
     "keywords": [],
     "dependencies": {
